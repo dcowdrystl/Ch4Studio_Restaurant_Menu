@@ -22,5 +22,17 @@ namespace Restaurant_Menu
             IsNew = true;
         }
 
+        public void IsItNew()
+        {
+            if (IsNew)
+            {
+                Console.WriteLine("Thats a new item");
+            }
+            else
+            {
+                Console.WriteLine("Not a new item");
+            }
+        }
+
     }
 }

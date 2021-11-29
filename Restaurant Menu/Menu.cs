@@ -26,11 +26,34 @@ namespace Restaurant_Menu
             Items.Add(item);
         }
 
+        public void RemoveItem(MenuItem item)
+        {
+            if (Items.Contains(item))
+            {
+                Items.Remove(item);
+            }
+            else
+            {
+                Console.WriteLine("We could not find that item in our menu");
+            }
+        }
+
+        public void CheckLastUpdate()
+        {
+            Console.WriteLine($"The menu was last updated on {LastUpdated}");
+        }
+
+        public void PrintItem(MenuItem item)
+        {
+            Console.WriteLine($"{item.Description} ({item.Price})");
+        }
+
         public void PrintMenu() 
         { 
             foreach (MenuItem item in Items)
             {
-                Console.WriteLine(item.Description);
+                /*Console.WriteLine(item.Description);*/
+                PrintItem(item);
             }
         }
     }

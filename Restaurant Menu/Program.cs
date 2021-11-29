@@ -25,6 +25,18 @@ namespace Restaurant_Menu
             menu.AddItem(pumpkinPie);
             /*Console.WriteLine(menu.Items.Count);*/
             menu.PrintMenu();
+
+            Console.WriteLine();
+            menu.RemoveItem(Burger);
+            menu.PrintMenu();
+
+            Burger.IsItNew();
+
+            menu.CheckLastUpdate(); 
+
+            menu.PrintItem(menu.Items[0]);
+
+            menu.PrintMenu();
         }
     }
 }
